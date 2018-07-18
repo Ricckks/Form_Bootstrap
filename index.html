@@ -1,5 +1,5 @@
-!doctype html>
-<html lang="pt">
+<!doctype html>
+<html lang="pt-br">
 
 <head>
     <!-- Required meta tags -->
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="bootstrap/compiler/style.css">
     <link rel="stylesheet" type="text/css" href="estiloo.css">
 
-    <title>Página de Envio</title>
+    <title>Página de Envio do Software</title>
 
 </head>
 
@@ -19,90 +19,110 @@
 
 
 
-    <div class="container">
+    <div class=" container my-5 ">
+
 
         <div class="row">
 
-            <div class="col-12 text-center my-5 text-light">
+            <div class="col-12  text-center my-5 text-light d-inline-block p-1">
 
-                <h1 class="display-4">Envio do Sistema</h1>
+                <h2 class="display-4">Envio do S.I.S.T</h2>
             </div>
 
-          </div>
 
-           <div class="row justify-content-lg-center mb-5">
+
+        </div>
+
+
+
+        <div class="row justify-content-lg-center mb-5">
 
             <div class="col-sm-12 col-md col-lg-8">
 
                 <form>
 
+
                     <div class="form-row">
                         <div class="form-group col-sm-12 text-light">
                             <label for="inputname">Nome da Empresa:</label>
-                            <select id "inputNome" class="form-control">
-                            <option selected>RAPE suas soluçoes tecnológicas (Pedro Nahime) </option>
-                            <option> RAHI suas soluçoes da Ti perto de você (Pedro Nahime)</option> 
+                            <select id "inputNome" onchange="escolha();" class="form-control">
+                            <option selected value="RAPE suas soluçoes tecnológicas (Pedro nahime)">RAPE suas soluçoes tecnológicas (Pedro Nahime) </option>
+                            <option value="RAHI suas soluçoes de ti peeto de você (pedro Nahime)"> RAHI suas soluçoes de Ti perto de você (Pedro Nahime)</option>
+                            
                            
                         </select>
+                            <p id="text"></p>
 
                         </div>
+
 
                         <div class="form-group col-sm-8 text-light">
                             <label for="inputEmpre">Responsaveis pela Empresa:</label>
-                            <select id "inputEmpre" class="form-control">
+                            <select id "inputEmpre"onchange="escolha();" class="form-control">
                                 <option selected>Pedro Nahime (DIRETOR)</option>
                                 <option>Ricardo Andrade (GERENTE)</option> 
+                                
                             </select>
-                        </div>
-
-                        <div class="form-group col-sm-6 text-light">
-                            <label for="inputData">data da emissão do Sistema:</label>
-                            <select id "inputData" class="form-control">
-                                    <option selected>15/01/2018</option>
-                                    <option>15/02/2018</option>
-                                    <option>15/03/2018</option>
-                                    <option>15/04/2018</option>
-                                    <option>15/05/2018</option>
-                                    <option>15/06/2018</option>
-                                    <option>15/07/2018</option>
-                                    <option>15/08/2018</option>
-                                    <option>15/09/2018</option>
-                                    <option>15/10/2018</option>
-                                    <option>15/11/2018</option>
-                                    <option>15/12/2018</option> 
-                                </select>
+                            <p id="text"></p>
                         </div>
 
 
-                        <div class="form-group col-sm-6 text-light">
+                        <div class="form-group col-sm-8 text-light">
                             <label for="inputnotaF">CNPJ (empresa que desenvolveu o sistema):</label>
-                            <select id "inputnotaF" class="form-control">
-                                        <option selected>10"."052"."317"/"4000-09</option>
-                                    
-                                    </select>
+                            <select id="inputnotaF" onchange="escolha();" class="form-control">
+                                            <option selected>10"."052"."317"/"4000-09</option>
+                                        
+                                        </select>
+                            <p id="text"></p>
                         </div>
 
+                        <div class="form-group col-sm-7 text-light">
+                            <label for="inputData">data da emissão do Sistema:</label>
+                            <select id "inputData" onchange="escolha();" class="form-control">
+                                    <option selected>15/01/2018 (Janeiro)</option>
+                                    <option>15/02/2018 (Fevereiro)</option>
+                                    <option>15/03/2018 (Março)</option>
+                                    <option>15/04/2018 (Abril)</option>
+                                    <option>15/05/2018 (Maio)</option>
+                                    <option>15/06/2018 (Junho)</option>
+                                    <option>15/07/2018 (julho)</option>
+                                    <option>15/08/2018 (Agosto)</option>
+                                    <option>15/09/2018 (Setembro)</option>
+                                    <option>15/10/2018 (Outubro)</option>
+                                    <option>15/11/2018 (Novemrbo)</option>
+                                    <option>15/12/2018 (Dezembro)</option> 
+                                </select>
+                            <p id="text"></p>
+                        </div>
+
+
+
+
                         <div class="form-group col-sm-6 text-light">
-                            <label for="inputPreco" id="quant">Preço:</label>
+                            <label for="inputPreco" id="preco">Preço:</label>
                             <input type="text" class="form-control" placeholder="R$ 2000,00">
 
                         </div>
-                        
-                      </div>
+                    
+                    </div>
 
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                  </form>
-           
-                </div>
-           
-              </div>
+                    <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+
+                </form>
+
+            </div>
+
+        </div>
 
     </div>
-    <!-- Optional JavaScript -->
+
+     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="jquery/dist/jquery.js "></script>
     <script src="popper.js/dist/umd/popper.js "></script>
     <script src="bootstrap/dist/js/bootstrap.js "></script>
+
+    <script type="text/JavaScript" src="main.js"> </script>
 </body>
 
 </html>
